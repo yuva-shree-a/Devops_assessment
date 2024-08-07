@@ -24,13 +24,17 @@ pipeline {
  
         stage('Build') {
             steps {
+                dir('C://ProgramData//Jenkins//.jenkins//workspace//jenkins_multibranch_master//exercise-bt-collections-arraylist-sortedsearch'){
                 bat 'mvn -B -DskipTests clean package'
+                }
             }
         }
 
         stage('Test') {
             steps {
+                dir('C://ProgramData//Jenkins//.jenkins//workspace//jenkins_multibranch_master//exercise-bt-collections-arraylist-sortedsearch'){
                 bat 'mvn test'
+                }
             }
         }
     }
