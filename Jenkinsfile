@@ -26,7 +26,7 @@ pipeline {
  
         stage('Build') {
             steps {
-                dir('C://ProgramData//Jenkins//.jenkins//workspace//jenkins_multibranch_master//exercise-bt-collections-arraylist-sortedsearch'){
+                dir('C://ProgramData//Jenkins//.jenkins//workspace//jenkins_multibranch_secondbranch@2//exercise-bt-collections-arraylist-sortedsearch'){
                 bat 'mvn -B -DskipTests clean package'
                 }
             }
@@ -34,7 +34,7 @@ pipeline {
 
         stage('Test') {
             steps {
-                dir('C://ProgramData//Jenkins//.jenkins//workspace//jenkins_multibranch_master//exercise-bt-collections-arraylist-sortedsearch'){
+                dir('C://ProgramData//Jenkins//.jenkins//workspace//jenkins_multibranch_secondbranch@2//exercise-bt-collections-arraylist-sortedsearch'){
                 bat 'mvn test'
                 }
             }
